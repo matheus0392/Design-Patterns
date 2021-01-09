@@ -9,6 +9,18 @@ public class ResourcerManager {
 		PrintSpooler.getInstance();
 		PrintSpooler.getInstance();
 
+		// First thread
+		Thread threadOne = new Thread(() -> {
+			PrintSpooler2 s = PrintSpooler2.getInstance();
+		});
+
+		// Second thread
+		Thread threadTwo = new Thread(() -> {
+			PrintSpooler2 s = PrintSpooler2.getInstance();
+		});
+
+		threadOne.start();
+		threadTwo.start();
 	}
 
 }
