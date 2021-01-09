@@ -2,7 +2,7 @@ package dev.msnascimento.singleton;
 
 public class PrintSpooler2 {
 
-	private static PrintSpooler2 spooler;
+	private static final PrintSpooler2 spooler = new PrintSpooler2();
 
 	private static boolean initialized = false;
 
@@ -20,8 +20,6 @@ public class PrintSpooler2 {
 
 		if (initialized)
 			return spooler;
-
-		spooler = new PrintSpooler2();
 		spooler.init();
 		initialized = true;
 
