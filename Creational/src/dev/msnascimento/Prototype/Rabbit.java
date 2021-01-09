@@ -8,6 +8,7 @@ public class Rabbit implements Cloneable {
 
 	private int age;
 	private Breed breed;
+	private Person owner;
 
 	public Rabbit() {
 	}
@@ -28,15 +29,27 @@ public class Rabbit implements Cloneable {
 		this.breed = breed;
 	}
 
+	public Person getPerson() {
+		return owner;
+	}
+
+	public void setPerson(String owner) {
+		this.owner = new Person(owner);
+	}
+
 	@Override
 	protected Rabbit clone() {
 
 		try {
-			return (Rabbit) super.clone();
+			 Rabbit rabbit=(Rabbit) super.clone();
+			 rabbit.owner= owner.clone();
+
+			 return rabbit;
 		} catch (CloneNotSupportedException e) {
 			throw new AssertionError();
 		}
 
 	}
+
 
 }
