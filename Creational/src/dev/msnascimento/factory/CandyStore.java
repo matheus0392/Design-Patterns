@@ -4,15 +4,14 @@ import java.util.ArrayList;
 
 public class CandyStore {
 
+	private final static CandyFactory chocolateFactory = new ChocolateFactory();
+	private final static CandyFactory hardCandyFactory = new HardCandyFactory();
+
 	public static void main(String[] args) {
 
-		CandyFactory candyFactory = new CandyFactory();
-
-		ArrayList<Candy> pack = candyFactory.getCandyPackage(5, "chocolate");
-		System.out.println(pack.toString());
-
-		pack = candyFactory.getCandyPackage(8, "hard candy");
-		System.out.println(pack.toString());
+		chocolateFactory.getCandyPackage(5, "dark");
+		hardCandyFactory.getCandyPackage(14, "lollipop");
+		hardCandyFactory.getCandyPackage(50, "candy cane");
 
 	}
 
