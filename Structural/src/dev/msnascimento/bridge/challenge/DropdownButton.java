@@ -1,9 +1,17 @@
 package dev.msnascimento.bridge.challenge;
 
-public abstract class DropdownButton extends Button {
+public class DropdownButton extends Button {
 
-  public void draw() {
-    System.out.println("Drawing a dropdown button.\n");
-  }
+	ButtonSize size;
+
+	public DropdownButton(ButtonSize size) {
+		super();
+		this.size = size;
+	}
+
+	public void draw() {
+		System.out.println(this.size.getButtomSize());
+		System.out.println("Drawing a dropdown button.\n");
+	}
 
 }
