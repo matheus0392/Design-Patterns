@@ -18,7 +18,6 @@ public class HardCandy_Lollipop extends Candy {
 
         System.out.println("One package of " + quantity + " hard candy has been made!");
         return hardCandyPackage;
-
     }
 
 }

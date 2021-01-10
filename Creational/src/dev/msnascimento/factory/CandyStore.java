@@ -1,7 +1,5 @@
 package dev.msnascimento.factory;
 
-import java.util.ArrayList;
-
 public class CandyStore {
 
 	private final static CandyFactory chocolateFactory = new ChocolateFactory();

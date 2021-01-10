@@ -19,7 +19,7 @@ public class HardCandyFactory extends CandyFactory {
 	}
 
 	@Override
-	public ArrayList getCandyPackage(int quantity, String type) {
+	public ArrayList<?> getCandyPackage(int quantity, String type) {
 		Candy candy = getCandy(type);
 		if (quantity % 10 != 0) {
 			System.out.println("Hard candy must be packaged in multiples of 10.");
