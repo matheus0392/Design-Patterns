@@ -1,6 +1,6 @@
 package dev.msnascimento.abstractfactory;
 
-public abstract class Handlebar {
+public abstract class Handlebar extends BikePart{
 
 	abstract String getDescription();
 }

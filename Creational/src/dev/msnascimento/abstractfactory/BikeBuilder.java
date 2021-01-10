@@ -7,6 +7,8 @@ public class BikeBuilder {
 		createBikeWithoutAbstractFactory();
 
 		createBikeWithAbstractFactory("road bike");
+
+		createBikeWithExtensibleAbstractFactory("mountain bike");
 	}
 
 	private static void createBikeWithoutAbstractFactory() {
@@ -35,4 +37,17 @@ public class BikeBuilder {
 		System.out.println();
 	}
 
+	private static void createBikeWithExtensibleAbstractFactory(String type) {
+
+		BikeFactory bikeFactory = FactoryCreator.createFactory(type);
+		Tire tireFront = (Tire) bikeFactory.create("tire");
+		Tire tireBack = (Tire) bikeFactory.create("tire");
+		Handlebar handlebar = (Handlebar) bikeFactory.create("handlebar");
+
+		System.out.println(tireFront.getDescription());
+		System.out.println(tireBack.getDescription());
+		System.out.println(handlebar.getDescription());
+		System.out.println();
+
+	}
 }

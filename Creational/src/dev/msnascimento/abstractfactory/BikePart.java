@@ -1,6 +1,6 @@
 package dev.msnascimento.abstractfactory;
 
-public abstract class Tire extends BikePart{
+public abstract class BikePart {
 
 	abstract String getDescription();
 }

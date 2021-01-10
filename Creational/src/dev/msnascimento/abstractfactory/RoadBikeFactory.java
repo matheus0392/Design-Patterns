@@ -12,4 +12,15 @@ public class RoadBikeFactory extends BikeFactory {
 		return new RoadBikeHandlebar();
 	}
 
+	@Override
+	BikePart create(String type) {
+		if (type.equalsIgnoreCase("tire")) {
+			return new RoadBikeTire();
+		} else if (type.equalsIgnoreCase("handlebar")) {
+			return new RoadBikeHandlebar();
+		}
+
+		return null;
+	}
+
 }

@@ -12,4 +12,15 @@ public class MountainBikeFactory extends BikeFactory {
 		return new MountainBikeHandlebar();
 	}
 
+	@Override
+	BikePart create(String type) {
+		if (type.equalsIgnoreCase("tire")) {
+			return new MountainBikeTire();
+		} else if (type.equalsIgnoreCase("handlebar")) {
+			return new MountainBikeHandlebar();
+		}
+
+		return null;
+	}
+
 }
