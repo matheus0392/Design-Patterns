@@ -3,21 +3,16 @@ package dev.msnascimento.composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SalesTeam {
+public class SalesTeam implements Payee {
 
-  private List<Manager> managers = new ArrayList<>();
-  private List<Salesperson> salespeople = new ArrayList<>();
+  private List<Payee> payees = new ArrayList<>();
 
-  void addManager(Manager manager) {
-    managers.add(manager);
-  }
-  void addSalesperson(Salesperson salesperson) {
-    salespeople.add(salesperson);
+  void addPayee(Payee payee) {
+	  payees.add(payee);
   }
 
   public void payExpenses(int amount) {
-    managers.forEach(manager -> manager.payExpenses(amount));
-    salespeople.forEach(salesperson -> salesperson.payExpenses(amount));
+	  payees.forEach(payee -> payee.payExpenses(amount));
   }
 
 }

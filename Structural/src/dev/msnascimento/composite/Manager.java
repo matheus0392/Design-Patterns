@@ -1,6 +1,6 @@
 package dev.msnascimento.composite;
 
-public class Manager {
+public class Manager implements Payee {
 
   private String name;
 

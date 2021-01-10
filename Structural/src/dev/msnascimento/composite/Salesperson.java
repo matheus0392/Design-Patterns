@@ -1,6 +1,6 @@
 package dev.msnascimento.composite;
 
-public class Salesperson {
+public class Salesperson implements Payee {
 
   private String name;
 
