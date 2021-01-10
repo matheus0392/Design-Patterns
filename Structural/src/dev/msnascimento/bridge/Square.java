@@ -2,10 +2,18 @@ package dev.msnascimento.bridge;
 
 import java.awt.Graphics;
 
-public abstract class Square extends Shape {
+public class Square extends Shape {
 
-  public void draw(Graphics graphics) {
-    graphics.fillRect(5, 15, 50, 50);
-  }
+	ColorShape colorShape;
+
+	public Square(ColorShape colorShape) {
+		super();
+		this.colorShape = colorShape;
+	}
+
+	public void draw(Graphics graphics) {
+		colorShape.setColor(graphics);
+		graphics.fillRect(5, 15, 50, 50);
+	}
 
 }

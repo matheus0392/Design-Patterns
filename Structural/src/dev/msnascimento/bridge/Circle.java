@@ -2,12 +2,18 @@ package dev.msnascimento.bridge;
 
 import java.awt.Graphics;
 
-public abstract class Circle extends Shape {
+public class Circle extends Shape {
 
-  public void draw(Graphics graphics) {
-    graphics.fillOval(75, 15, 50, 50);
-  }
+	ColorShape colorShape;
 
+	public Circle(ColorShape colorShape) {
+		super();
+		this.colorShape = colorShape;
+	}
 
+	public void draw(Graphics graphics) {
+		colorShape.setColor(graphics);
+		graphics.fillOval(75, 15, 50, 50);
+	}
 
 }
