@@ -2,13 +2,13 @@ package dev.msnascimento.composite.challenge;
 
 import java.util.ArrayList;
 
-public class BookCollection {
+public class BookCollection implements Book{
 
-  private ArrayList<NonfictionBook> nonfictionBooks = new ArrayList();
+  private ArrayList<Book> book = new ArrayList();
   private ArrayList<FictionBook> fictionBooks = new ArrayList();
 
-  public void addNonfictionBook(NonfictionBook nonfictionBook) {
-    nonfictionBooks.add(nonfictionBook);
+  public void addBook(Book book) {
+	  this.book.add(book);
   }
 
   public void addFictionBook(FictionBook fictionBook) {
@@ -16,12 +16,12 @@ public class BookCollection {
   }
 
   public void checkout() {
-    nonfictionBooks.forEach(NonfictionBook::checkout);
+	  this.book.forEach(Book::checkout);
     fictionBooks.forEach(FictionBook::checkout);
   }
 
   public void returnBook() {
-    nonfictionBooks.forEach(NonfictionBook::returnBook);
+	  this.book.forEach(Book::returnBook);
     fictionBooks.forEach(FictionBook::returnBook);
   }
 

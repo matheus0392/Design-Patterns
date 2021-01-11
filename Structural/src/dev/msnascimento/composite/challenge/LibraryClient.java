@@ -9,20 +9,26 @@ public class LibraryClient {
     FictionBook fictionBookTwo = new FictionBook("The Great Gatsby", false);
 
     BookCollection bookCollection = new BookCollection();
-    bookCollection.addNonfictionBook(nonfictionBook);
+    bookCollection.addBook(nonfictionBook);
     bookCollection.addFictionBook(fictionBookOne);
     bookCollection.addFictionBook(fictionBookTwo);
 
-    checkoutNonfictionBook(nonfictionBook);
-    checkoutFictionBook(fictionBookOne);
-    checkoutBookCollection(bookCollection);
+    checkoutBook(nonfictionBook);
+    checkoutBook(fictionBookOne);
+    checkoutBook(bookCollection);
 
-    returnNonfictionBook(nonfictionBook);
-    returnFictionBook(fictionBookOne);
-    returnBookCollection(bookCollection);
+    returnBook(nonfictionBook);
+    returnBook(fictionBookOne);
+    returnBook(bookCollection);
 
   }
+  
+  public static void checkoutBook(Book book) {
+	  book.checkout();
+	}
 
+
+  /*
   public static void checkoutNonfictionBook(NonfictionBook nonfictionBook) {
     nonfictionBook.checkout();
   }
@@ -33,8 +39,13 @@ public class LibraryClient {
 
   public static void checkoutBookCollection(BookCollection bookCollection) {
     bookCollection.checkout();
-  }
-
+  }*/
+  
+  public static void returnBook(Book book) {
+	  book.returnBook();
+	}
+  
+/*
   public static void returnNonfictionBook(NonfictionBook nonfictionBook) {
     nonfictionBook.returnBook();
   }
@@ -46,5 +57,5 @@ public class LibraryClient {
   public static void returnBookCollection(BookCollection bookCollection) {
     bookCollection.returnBook();
   }
-
+*/
 }

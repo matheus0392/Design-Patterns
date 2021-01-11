@@ -1,6 +1,6 @@
 package dev.msnascimento.composite.challenge;
 
-public class FictionBook {
+public class FictionBook implements Book{
 
   String name;
   boolean checkedOut;
