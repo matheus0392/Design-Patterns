@@ -19,7 +19,7 @@ public class ExtraCheese implements Pizza {
 
 	@Override
 	public String getName() {
-		return "Extra cheese";
+		return currentPizza.getName();
 
 	}
 
