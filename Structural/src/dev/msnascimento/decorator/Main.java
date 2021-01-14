@@ -3,9 +3,9 @@ package dev.msnascimento.decorator;
 public class Main {
 
   public static void main(String[] args) {
-    order(new PizzaMargherita());
-    order(new PizzaHawaiian());
-    order(new PizzaPepperoni());
+    order(new ExtraCheese(new PizzaMargherita()));
+    order(new ExtraCheese(new PizzaHawaiian()));
+    order(new ExtraCheese(new PizzaPepperoni()));
   }
 
   public static void order(Pizza pizza) {
