@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 public class PopulationSimulator {
 
   static ArrayList<Animal> animals = new ArrayList();
+  static AnimalFactory factory = new AnimalFactory();
 
   public static void main(String[] args) {
 
@@ -32,12 +33,8 @@ public class PopulationSimulator {
   private static void createRandomAnimal() {
     Random random = new Random();
     int randInt = random.nextInt(2);
-    Animal animal = null;
-    if(randInt == 0) {
-      animal = new Lion();
-    } else if(randInt == 1) {
-      animal = new Tiger();
-    }
+    Animal animal = factory.getAnimal(randInt);
+
     animal.setLocation(random.nextInt(1000), random.nextInt(1000));
     System.out.println("Creating " + animal + ", type: " + animal.getAnimalType() +
         ", location: " + animal.getLocation()[0] + " " + animal.getLocation()[1]);
