@@ -1,4 +1,4 @@
-package dev.msnascimento.decorator;
+package dev.msnascimento.decorator.challenge;
 
 import java.util.ArrayList;
 

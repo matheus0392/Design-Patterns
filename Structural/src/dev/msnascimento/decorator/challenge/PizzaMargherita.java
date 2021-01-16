@@ -1,17 +1,15 @@
-package dev.msnascimento.decorator;
+package dev.msnascimento.decorator.challenge;
 
 import java.util.ArrayList;
 
-public class PizzaHawaiian implements Pizza {
+public class PizzaMargherita implements Pizza {
 
   static ArrayList toppings = new ArrayList<String>();
-  static String name = "Hawaiiian";
+  static String name = "Margherita";
 
-  public PizzaHawaiian() {
+  public PizzaMargherita() {
     toppings.add("cheese");
     toppings.add("tomato");
-    toppings.add("ham");
-    toppings.add("pineapple");
   }
 
 
@@ -22,5 +20,7 @@ public class PizzaHawaiian implements Pizza {
   public String getName() {
     return name;
   }
+
+
 
 }
