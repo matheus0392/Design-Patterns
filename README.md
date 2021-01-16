@@ -1,2 +1,3 @@
 # Design-Patterns
-https://www.linkedin.com/learning/java-design-patterns-creational/improve-code-with-creational-design-patterns
+https://www.linkedin.com/learning/java-design-patterns-creational
+https://www.linkedin.com/learning/java-design-patterns-structural
