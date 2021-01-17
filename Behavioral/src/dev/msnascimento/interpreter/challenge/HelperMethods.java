@@ -1,4 +1,4 @@
-package dev.msnascimento.interprete.challenge;
+package dev.msnascimento.interpreter.challenge;
 
 import java.util.Arrays;
 import java.util.List;

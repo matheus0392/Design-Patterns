@@ -1,4 +1,4 @@
-package dev.msnascimento.interprete.challenge;
+package dev.msnascimento.interpreter.challenge;
 
 public interface Expression {
 
