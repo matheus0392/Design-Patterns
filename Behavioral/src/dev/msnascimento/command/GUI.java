@@ -9,7 +9,7 @@ public class GUI {
 		Button saveButton = new Button("Save");
 		Button printButton = new Button("Print");
 
-		saveButton.click();
-		printButton.click();
+		saveButton.click(new SaveDocument(document));
+		printButton.click(new PrintDocument(document));
 	}
 }
