@@ -2,14 +2,13 @@ package dev.msnascimento.interprete.challenge;
 
 public class Main {
 
-  public static void main(String[] args) {
+	public static void main(String[] args) {
 
-    String context = "this is a a sentence";
+		String context = "this is a a sentence";
 
-    // Interpret the sentence here
+		context = new FirstCapitalLetter().interpret(context);
+		System.out.println(context);
 
-    System.out.println(context);
-
-  }
+	}
 
 }
