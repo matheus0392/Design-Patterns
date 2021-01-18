@@ -2,42 +2,24 @@ package dev.msnascimento.mediator.challenge;
 
 public class Plane {
 
-  private boolean isInTheAir;
-  private int id;
-  private Runway runway;
-  private PlanesInFlight planesInFlight;
-  private PlanesOnGround planesOnGround;
+	private boolean isInTheAir;
+	private int id;
 
+	public Plane(int id) {
+		this.id = id;
+		isInTheAir = false;
+	}
 
-  public Plane(int id) {
-    this.id = id;
-    isInTheAir = false;
-    runway = new Runway();
-    planesInFlight = new PlanesInFlight();
-    planesOnGround = new PlanesOnGround();
-    planesOnGround.addPlane(this);
-  }
+	public boolean getIsInTheAir() {
+		return isInTheAir;
+	}
 
-  public void takeOff() {
-    if(!isInTheAir && runway.getIsAvailable()) {
-      System.out.println("Plane " + id + " is taking off...");
-      planesOnGround.removePlane(this);
-      planesInFlight.addPlane(this);
-      isInTheAir = true;
-      runway.setIsAvailable(false);
-    }
+	public void setIsInTheAir(boolean isInTheAir) {
+		this.isInTheAir = isInTheAir;
+	}
 
-  }
+	public int getId() {
+		return id;
+	}
 
-  public boolean getIsInTheAir() {
-    return isInTheAir;
-  }
-
-  public void setIsInTheAir(boolean isInTheAir) {
-    this.isInTheAir = isInTheAir;
-  }
-
-  public int getId() {
-    return id;
-  }
 }
