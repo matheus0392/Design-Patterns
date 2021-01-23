@@ -8,13 +8,13 @@ public class DiscountVisitor implements Visitor {
 	}
 
 	@Override
-	public void visitor(Milk milk) {
+	public void visit(Milk milk) {
 		milk.setPrice(1.6);
 
 	}
 
 	@Override
-	public void visitor(GroceryList groceryList) {
+	public void visit(GroceryList groceryList) {
 		System.out.println("Disconts has been applied to your list");
 
 	}
